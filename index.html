@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #tbl1
+        {
+            width:200px;
+        }
+        td
+        {
+            font-size:10px
+        }
+        .monthHeader {
+            font-weight: bold;
+        }
+        td:empty:after, th:empty:after {
+            content: "\00a0";
+        }
+        
+    </style>
+    <script src="code.js"></script>
+</head>
+
+<body>
+    <p id="pYear" >
+
+    </p>
+    <table id="tbl1" border="1">
+        
+    </table>
+    <br />
+    <table border="0">
+        <tr>
+            <td id="tdChangeYear" style="font-size:14px">
+                Задать год
+            </td>
+            <td>
+                <input id="txtYear" type="text" value="">
+            </td>
+            <td>
+                <input id="btnChangeYear" type="button" value="Изменить год" onclick="changeYear()"/>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-size:14px">
+                Language:
+            </td>
+            <td colspan="2">
+              
+                <select id="selLanguage" onchange="changeLang()">
+                    <option value="0">Русский</option>
+                    <option value="1">
+                        English
+                    </option>
+                </select>
+            </td>
+        </tr>
+    </table>
+   <script>
+       
+       main();
+   </script>
+</body>
+</html>
